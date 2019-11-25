@@ -1,0 +1,105 @@
+.menu-superior{
+	font-weight: bold;
+	background-color: red;
+}
+
+.menu-superior li{
+	color: white;
+}
+
+.menu-superior li a{
+	border-left: 1px solid white;
+}
+
+main{
+ min-height: 100px;
+}
+
+body{
+	background : #00BFFF;
+  	background-attachment: fixed;
+	margin-top:50px;
+	margin-bottom: -100px;
+}
+
+.icon-bar {
+	color: black;
+}
+
+.botao-sanduiche{
+	padding-bottom: -5px;
+}
+
+.navbar-header button:hover{
+	background-color: rgba(0,0,0,0.3);
+}
+
+@media(max-width:768px) {
+    .carousel  {
+    	padding-top: 50px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 5px 0;
+    }
+
+}
+.produtos img{
+	width: 100%;
+	font-color:;
+}
+
+.produtos label{
+	font-size: 18px;
+
+}
+
+.logo{
+	position:absolute;
+	display:block;
+	margin-top: 5px;
+}
+
+.container{
+	background-color: white;
+	padding-bottom: 500px;
+
+}
+
+nav a{
+	margin-right: 10px;
+}
+
+.categorias{
+	padding: 0;
+	border:1px solid #BDBDBD ;
+}
+
+footer{
+	margin-bottom:-10px;
+}
+
+.produtos2{
+	border:1px solid #BDBDBD ;
+	margin:35px;
+	text-align: center;
+
+}
+
+.item img{
+	margin-left: 90px;
+}
+
+.rodape{
+	background-color:black;
+	color:white;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+
+.container {
+	-webkit-box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.59);
+	-moz-box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.59);
+	box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.59);
+}

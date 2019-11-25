@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv=”content-type” content="text/html;" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="keywords" content="tags, que, eu, quiser, usar, para, os, robos, do, google" />
+  <title> Camadas </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- ESTILOS PARA ESTA PÁGINA -->
+  <link href="css/estilo.css" rel="stylesheet"/>
+  <link href="css/categoria.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- JAVASCRIPT E JQUERY -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!-- INÍCIO DO MENU SUPERIOR -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" id="menu_superior" role="navigation" style="color: white;">
+    <!--nav class="navbar navbar-default navbar-fixed-top"-->
+    <div class="col-md-2 logo">
+      <img src="https://i.imgur.com/J5E3Rrx.png" width="55" height="40">
+    </div>
+  </div>
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <i class="material-icons botao-sanduiche">&#xe8fe;</i>
+    </button>
+  </div>
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <nav class="collapse navbar-collapse navegacao" id="bs-example-navbar-collapse-1">
+    <!-- **************************************** MENU DE NAVEGAÇÃO ************************************* -->
+    <ul class="nav navbar-nav navbar-right">
+
+      
+      <li><a href="index.html" target="_self">Home</a></li>                  
+    </ul>
+  </nav>
+  <!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
+</nav>
+<!-- FIM DO MENU SUPERIOR -->
+
+<div class="container">
+  <div class="row">
+    <!-- INÍCIO DO MENU CATEGORIA -->
+    <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12 categorias">
+      <nav>
+       <h3 class="text-center"></h3>
+       <ul>
+         <h3>Tópicos</h3>
+         <br>
+         <ul>
+         
+          <a href="historia.html" target="_self"><li>Historia</li></a>
+          <a href="camadas.html" target="_self"><li>Camadas</li></a>
+          <a href="implementacao.html" target="_self"><li>Implementação</a></li> 
+        </ul>
+    </nav>
+  </div>
+  <!-- FIM DO MENU CATEGORIA -->
+
+  <!-- EXIBIÇÃO DO CONTEÚDO -->
+  <main class="col-md-9 col-lg-9 col-sm-8 col-xs-12 produtos">
+   <h2 class="text-center">Camadas do Modelo OSI</h2>
+
+<br>
+<br>
+<p>As camadas do Modelo OSI, representam como os dados são tratados, desde os pulsos elétricos do cabo, até a aplicação que é exibida na tela do usuário. Com a criação deste modelo, diversas vantagens podem ser apontadas em relação ao que uma rede de computadores era antes:</p>
+
+<p class="text-center"> -> Particionamento de diversas operações (decomposição das partes) de redes complexas em camadas, simplificando o gerenciamento e tornando mais acessível o entendimento de cada parte;</p>
+
+<p class="text-center"> -> Possibilidade de efetuar uma alteração em qualquer uma das camadas, sem a necessidade de que as outras sejam alteradas;</p>
+
+<p class="text-center"> -> Estabelecimento de um padrão de interfaces, possibilitando a interoperabilidade (plug-and-play), viabilizando o desenvolvimento, suporte e compatibilidade por conta dos diversos tipos de fabricantes existentes no mercado;</p>
+
+<p class="text-center"> -> Viabiliza uma comunicação íntegra entre tipos diferentes de hardware e de software de rede, tornando a comunicação sincronizada entre si; </p>
+
+<p class="text-center"> -> Simplifica o ensino e o aprendizado sobre redes de computadores a partir da fragmentação do conhecimento em pequenas partes;
+Acelera a evolução. </p>
+
+<br>
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">Camadas</th>
+      <th scope="col">Funções</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">7 - Aplicação (Application)</th>
+      <td>Funções especialistas (transferência de arquivos, envio de e-mail, terminal virtual)</td>
+    </tr>
+    <tr>
+      <th scope="row">6 - Apresentação (Presentation)</th>
+      <td>Formatação dos dados, conversão de códigos e caracteres</td>
+    </tr>
+    <tr>
+      <th scope="row"> 5 - Sessão (Session)</th>
+      <td>Negociação e conexão com outros nós, analogia</td>
+    </tr>
+    <tr>
+      <th scope="row"> 4 - Transporte (Transport)</th>
+      <td>Oferece métodos para a entrega de dados ponto-a-ponto</td>
+    </tr>
+    <tr>
+      <th scope="row"> 3 - Rede (Network)</th>
+      <td>Roteamento de pacotes em uma ou várias redes</td>
+    </tr>
+    <tr>
+      <th scope="row"> 2 - Dados / Enlace (Data Link)</th>
+      <td>Detecção de erros</td>
+    </tr>
+    <tr>
+      <th scope="row"> 1 - Física (Physical)</th>
+      <td>Transmissão e recepção dos bits brutos através do meio físico de transmissão</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br>
+
+
+<h3>Principais Funções de Cada Camada</h3>
+<br>
+
+<p>Cada camada superior faz uso dos serviços da camada diretamente inferior e presta serviços à camada diretamente acima.</p>
+
+<p>Cada uma delas tem a capacidade de se comunicar com a mesma no computador de destino, ou seja, não é possível para a camada dois ler dados que foram gerados na camada três. Isto origina uma comunicação virtual entre as camadas em computadores diferentes. Cada camada precisa apenas ser capaz de comunicar com as camadas imediatamente superiores e inferiores. </p>
+<br>
+
+
+
+<h2>Camadas</h2>
+<br>
+
+<h4>Camada de Aplicação (Application Layer)</h4>
+<p>Fornece serviços às aplicações do usuário.
+Possibilita que o usuário possa obter informações de sua rede através de um aplicativo, como navegador, também conhecido browser (Ex.: Mozilla Firefox, Google Chromium, Google Chrome…), Clientes de E-mail (Ex.: Thunderbird e Outlook Express), além de muitos outros.</p>
+
+<br>
+<br>
+
+<h4 class="text-center">Esta camada é responsável diretamente pela interface entre o usuário do computador e a rede. Acesso a softwares que transmitem e recebem dados da rede, como softwares de e-mail e navegadores.</h4>
+
+<br>
+<br>
+
+<h4>Camada de Apresentação (Presentation Layer)</h4>
+<p>Encriptação e compressão de dados.
+Cuida da tradução dos dados da camada de aplicação em dados legíveis (que sejam entendidos) pelos protocolos. Cuida também da formatação dos dados, e da representação destes.
+Assegura a compatibilidade entre camadas de aplicação de sistemas diferentes, ou seja, é  responsável por fazer com que duas redes diferentes se comuniquem, transformando os dados no processo de comunicação.</p>
+
+<br>
+<br>
+
+<h4 class="text-center">Camada responsável por apresentar os dados à camada de aplicação. Ela é encarregada de codificar e decodificar os dados, de maneira que se tornem legíveis na camada de aplicação, assim como criptografia e descompressão. Esta camada pode ser conhecida também como “camada tradutora”</h4>
+
+<br>
+<br>
+
+<h4>Camada de Sessão (Session Layer)</h4>
+<p>Controla (estabelece, faz a gestão e termina), as sessões entre aplicações.</p>
+
+<br>
+<br>
+
+<h4 class="text-center"> Responsável por controlar a comunicação entre dois computadores. A camada de sessão gerencia o estabelecimento e finalização de uma conexão entre dois computadores, assim como as formas em que uma conexão pode ser feita: simplex (um computador apenas transmite, o outro apenas recebe), half duplex (somente um computador por vez transmite dados) ou full duplex (ambos os computadores podem transmitir e receber dados ao mesmo tempo)</h4>
+
+<br>
+<br>
+
+
+<h4>Camada de Transporte (Transport Layer)</h4>
+<p>Controle de fluxo de informação, segmentação e controle de erros.
+Garante a comunicação fim-a-fim (end-to-end).
+Se responsabiliza pela entrega e recebimento dos dados.
+O protocolo de transporte pode operar em 2 modos, Orientados à Conexão ou Não.
+Modo Não Orientado a Conexão: serviço de transporte não confiável. A camada de transporte somente mapeia o pedido de transmissão de dados em pacotes para a transmissão pela camada de rede. Um exemplo de um protocolo não orientado a conexão é o protocolo UDP (User Datagram Protocol).
+Modo Orientado a Conexão: serviço de transporte confiável. O transporte orientado a conexões consiste em ocultar as imperfeições do serviço de rede, de modo que os processos do usuário possam simplesmente supor a existência de um fluxo de bits livre de erros. Um exemplo de um protocolo orientado a conexão é o TCP (Transmission Control Protocol).</p>
+
+<br>
+<br>
+
+<h4 class="text-center">É responsável por agrupar os dados em seguimentos e fragmentar estes seguimentos de forma que se encaixem na tecnologia física de redes da qual está sendo utilizada. Algumas características fazem parte desta camada, como garantir que os seguimentos foram entregues ao destino, controlar se houve erro na transmissão, controlar o fluxo de seguimentos em transmissão, garantir a seqüência correta destes seguimentos e, caso haja em algum momento, erro na transmissão ou, algum seguimento não seja entregue, a camada de transporte se encarrega de re-transmitir o seguimento perdido e/ou corrompido. </h4>
+
+<br>
+<br>
+
+<h4>Camada de Rede (Network Layer)</h4>
+<p>Encaminhamento (routing) de pacotes e fragmentação.
+Esquema de endereçamento lógico dos pacotes, convertendo endereços lógicos em físicos (IP Address em MAC Address), fazendo com que os pacotes cheguem corretamente ao seu destino.
+Interconexão de Redes.
+Tratamento de Erros.
+Fragmentação de Pacotes.
+Controle de Congestionamento.
+Sequenciamento de Pacotes.</p>
+
+<br>
+<br>
+
+<h4 class="text-center">Trata-se de uma camada onde, são encaminhados os dados na rede, verificando a melhor rota a ser seguida. É nesta camada que o endereçamento IP é atribuído ao pacote de dados. </h4>
+
+<h4>Camada de Enlace ou Link de Dados (Data Link Layer)</h4>
+<p>Controla o acesso ao meio físico de transmissão.
+Controlo de erros da camada física.
+É responsável por fornecer meios funcionais para a transferência de dados entre os dispositivos da rede.</p>
+
+<br>
+<br>
+
+<h4 class="text-center">O exemplo mais conhecido desta camada é a Ethernet. Outros são 802.11 (WiFi), Frame Relay e ATM. Na família TCP/IP temos o PPP e o SLIP.
+Esta camada é responsável por traduzir os dados vindos da camada anterior (Rede) em bits e prover a transferência dos dados no meio.</h4>
+
+<br>
+<br>
+
+<h4>Camada Física (Physical Layer)</h4>
+<p>Define as todas as características técnicas do meio físico de transmissão da rede, conectores, interfaces, codificação ou modulação de sinais, incluindo o layout de pinos, voltagens e especificações de cabos.</p>
+
+<br>
+<br>
+
+<h4 class="text-center">Está é a camada do meio em si. Fazem parte desta camada o cabeamento, os conectores, voltagem, bits, entre outros dispositivos. </h4>
+
+<br>
+
+<h2 class="text-center">Dispositivos de Rede X Camadas</h2>
+
+<br>
+
+<h4> Camada 1 – Física: </h4>
+<p>Cabos e Fios (Ex.: Cabo UTP / Coaxil, Fibra Óptica);</p>
+<p>HUBs (concentradores);</p>
+<p>Repetidores / Conversores;</p>
+<p>Os adaptadores de rede também fazem parte desta camada.</p>
+
+<br>
+
+<h4> Camada 2 – Enlace:</h4>
+<p>Bridges (pontes);</p>
+<p>Switches Comuns (comutadores). Há alguns switches, capazes de funcionar também na Camada 3;</p>
+<p>Placas de Rede (MAC).</p>
+
+<br>
+
+<h4>Camada 3 – Rede:</h4>
+<p>Routers (roteadores);</p>
+<p>Switches Gerenciáveis, muitas vezes também conhecido por “Switch de Camada 3” ou “Switch Layer 3”.</p>
+
+<br>
+
+<h4>Demais Camadas (da 4 até a 7):</h4>
+
+<p>Daqui em diante podem existir equipamentos específicos, mas basicamente são Computadores com Sistema Operacional Embarcado; Equipamentos para Firewall, DNS, Roteadores mais poderosos. Todos estes podem ir desde a camada 2 até a 7.</p>
+
+
+
+
+
+
+</div>
+</main>
+<!-- FIM DA EXIBIÇÃO DO CONTEÚDO -->
+</div>
+ <!-- FIM DA ROW -->
+</div>
+<!-- INÍCIO DO RODAPÉ -->
+<br>
+<div class="rodape">
+Desenvolvedores: <p> Nathalia Alves e Marcio Filho </p>
+
+</div>
+</div>
+
+<!-- FIM DO RODAPÉ -->
