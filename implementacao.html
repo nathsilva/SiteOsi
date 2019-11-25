@@ -73,7 +73,7 @@
 
   <!-- EXIBIÇÃO DO CONTEÚDO -->
   <main class="col-md-9 col-lg-9 col-sm-8 col-xs-12 produtos">
-   <h1 class="text-center">Implementação</h1>
+   <h2 class="text-center">Implementação</h2>
    <br>
    <br>
    <h4>Etapas obrigatórias para atingir interoperabilidade (comunicação transparente), compatibilidade (execução em diferentes versões de um sistema), portabilidade (execução em diferentes arquiteturas) e escalabilidade (capacidade de expansão) exigidas no sistema aberto (OSI):</h4>
@@ -84,3 +84,104 @@
 <p>Definição dos protocolos de camada: define os componentes que fazem parte do modelo (padrões de interoperabilidade e portabilidade), não só os relacionados à comunicação, mas também alguns não relacionados, como a estrutura de armazenamento de dados;</p>
 
 <p> Seleção dos perfis funcionais: realizada pelos órgãos de padronização de cada país que escolhem os padrões que lhes cabem, baseados em alguns critérios, por exemplo: condições tecnológicas, base instalada, visão futura.</p>
+
+<p> Ligar os cabos e ver se os leds do switch e das placas estão acesos é o primeiro passo. O segundo é configurar os endereços da rede para que as estações possam conversar entre si e o terceiro é finalmente compartilhar a conexão, arquivos, impressoras e o que mais você quer que as outras estações da rede local tenham acesso, ou mesmo configurar seu próprio servidor e disponibilizar serviços diversos para a Internet.</p>
+
+<p> Graças ao TCP/IP, tanto o Linux quanto o Windows e outros sistemas operacionais em uso são intercompatíveis. Não existe problema para as máquinas com o Windows acessarem a Internet através da conexão compartilhada no Linux, por exemplo. O TCP/IP é a língua mãe que permite que todos se comuniquem.</p>
+
+<p> Atualmente, o TPC/IP é suportado por todos os principais sistemas operacionais, não apenas os destinados a PCs, mas a praticamente todas as arquiteturas, incluindo celulares, smartphones e até mesmo vários dispositivos bem mais simples que eles. Qualquer sistema com um mínimo de poder de processamento pode conectar-se à Internet, desde que alguém desenvolva uma implementação do TCP/IP para ele, juntamente com alguns aplicativos. </p>
+
+<br>
+<br>
+<h4> Endereço IP</h4>
+<br>
+
+<p> Os endereços IP identificam cada host (ou seja, cada estação) na rede. A regra básica é que cada host deve ter um endereço IP diferente e devem ser utilizados endereços dentro da mesma faixa.</p>
+
+<p> Um endereço IP é composto de uma sequencia de 32 bits, divididos em 4 grupos de 8 bits cada, chamados de octetos e cada octeto permite o uso de 256 combinações diferentes (dois elevado à oitava potência). Para facilitar a configuração dos endereços, usamos números de 0 a 255 para representar cada octeto, formando endereços como 220.45.100.222 ou 131.175.34.7. Isso torna a tarefa de configurar e memorizar os endereços bem mais fácil do que seria se precisássemos decorar sequencias de números binários. </p>
+
+<p> O endereço IP é dividido em duas partes. A primeira identifica a rede à qual o host está conectado (necessário, pois, em uma rede TCP/IP, podemos ter várias redes conectadas entre si, como no caso da Internet) e a segunda identifica o host propriamente dito dentro da rede.</p>
+
+<p> Obrigatoriamente, os primeiros bits do endereço servirão para identificar a rede e os últimos servirão para identificar a estação em si. Como temos apenas 4 octetos, qualquer divisão fixa limitaria bastante o número de endereços possíveis, um problema especialmente no caso da Internet, onde existe um número muito grande de redes diferentes, muitas delas com dezenas de milhares de estações conectadas, como no caso dos grandes provedores de acesso.</p>
+
+<br>
+
+<h4>Máscara de sub-rede</h4>
+
+<p>A máscara de sub-rede indica qual parte do endereço é usada para endereçar a rede e qual parte é usada para endereçar o host dentro dela.</p>
+
+<p>Na designação tradicional, com as três classes de endereços, a máscara acompanha a classe do endereço IP. Em um endereço de classe A, a máscara será 255.0.0.0, indicando que o primeiro octeto se refere à rede e os três últimos ao host; em um endereço classe B, a máscara padrão será 255.255.0.0, onde os dois primeiros octetos referem-se à rede e os dois últimos ao host, enquanto em um endereço classe C, a máscara padrão será 255.255.255.0, onde apenas o último octeto refere-se ao host.</p>
+
+<br>
+
+<h4>Gateway</h4>
+
+ <p> O default gateway, ou gateway padrão é a porta de entrada e de saída da rede. Ele é o roteador que possui o link de Internet e é o responsável por rotear o tráfego dos demais hosts da rede para a Internet e vice-versa. A menos que exista outra rota definida manualmente, todo o tráfego destinado a endereços fora da rede será encaminhado ao default gateway.</p>
+
+<p> Quando você compartilha a conexão entre várias estações, apenas o servidor que está compartilhando a conexão possui um endereço IP válido, só ele “existe” na Internet. Todos os demais acessam através dele, encaminhando para ele os pacotes destinados à Internet. </p>
+
+<p> Se o endereço de rede local do servidor que está compartilhando a conexão é “192.168.1.1”, então este é o endereço que todos os demais usarão como gateway padrão.</p>
+
+<br>
+
+<h4>DNS</h4> 
+
+<p> O DNS (domain name system) permite usar nomes amigáveis em vez de endereços IP para acessar servidores. Quando você se conecta à Internet e acessa o endereço https://www.hardware.com.br, é um servidor DNS que converte o “nome fantasia” no endereço IP real do servidor, permitindo que seu micro possa acessá-lo. </p>
+
+<p> Para tanto, o servidor DNS mantém uma tabela com todos os nomes fantasia, relacionados com os respectivos endereços IP. A maior dificuldade em manter um servidor DNS é justamente manter esta tabela atualizada, pois o serviço precisa ser feito manualmente.</p>
+
+<p> Faz parte da configuração da rede informar os endereços DNS do provedor (ou qualquer outro servidor que você tenha acesso), que é para quem seu micro irá perguntar sempre que você tentar acessar qualquer coisa usando um nome de domínio e não um endereço IP. Servidores DNS também são muito usados em intranets, para tornar os endereços mais amigáveis e fáceis de guardar.</p>
+
+<p> Por padrão são usados dois endereços. Assim, se o primeiro estiver fora do ar, o sistema envia a solicitação para o segundo. Também funciona com um endereço só, mas você perde a redundância. Tipicamente, acessamos usando os endereços de DNS fornecidos pelo provedor de acesso, mas é possível também instalar um servidor DNS dentro da sua rede local, usando o pacote “bind” em um servidor Linux, ou utilizar um servidor de DNS público, como os servidores públicos do Google, que correspondem aos endereços 8.8.8.8 e 8.8.4.4 ou do http://opendns.com, que respondem pelos endereços 208.67.222.222 e 208.67.220.220. </p>
+
+<br>
+
+<h4>DHCP</h4>
+
+<p>O DHCP (“Dynamic Host Configuration Protocol” ou “protocolo de configuração dinâmica de endereços de rede”) permite que todas as estações da rede recebam suas configurações de rede automaticamente a partir de um servidor central, sem que você precise ficar configurando os endereços manualmente em cada um.</p>
+
+<p> O protocolo DHCP trabalha de uma forma bastante interessante. Inicialmente, a estação não sabe quem é, não possui um endereço IP e não sabe sequer qual é o endereço do servidor DHCP da rede. Ela manda, então, um pacote de broadcast endereçado ao IP “255.255.255.255”, que é transmitido pelo switch para todos os micros da rede. O servidor DHCP recebe este pacote e responde com um pacote endereçado ao endereço IP “0.0.0.0”, que também é transmitido para todas as estações.</p>
+
+<br>
+
+<h4>NAT</h4>
+
+<p>O NAT é uma técnica avançada de roteamento que permite que várias estações acessem a Internet usando uma única conexão e um único endereço IP válido. Não importa se você acessa via ADSL, cabo, wireless, 3G, satélite, acesso discado ou via sinais de fumaça; usando o NAT você pode compartilhar a conexão entre as diversas estações da rede local, permitindo que todas compartilhem o link de acesso. A sigla NAT é abreviação de “Network Address Translation” (tradução de endereços de rede), o que dá uma boa dica de como o sistema funciona.</p>
+
+<p>Ao receber um pacote de uma das estações da rede local endereçado à Internet, o servidor substitui o endereço da estação (192.168.0.2, por exemplo) pelo seu endereço de Internet e o envia ao destinatário. Ao receber resposta, o servidor novamente troca o endereço de Internet do destinatário pelo seu (do servidor) IP de rede local. A estação acha que está conversando diretamente com o servidor e não enxerga os demais hosts da Internet, enquanto eles (os demais hosts) enxergam apenas o servidor e não os demais micros da rede local, que permanecem invisíveis.</p>
+
+<p>Este processo de tradução é feito em tempo real, sem adicionar um volume considerável de latência na conexão (ou seja, sem aumentar o ping de forma perceptível) nem reduzir a velocidade da conexão, de forma que ele se tornou largamente utilizado.</p>
+
+<p>Usando o NAT, o link não é dividido entre as estações, mas sim compartilhado entre elas. Desde que uma única estação esteja baixando arquivos em um dado momento, ela dispõe de toda a banda da conexão, como se estivesse acessando diretamente. Se duas estações baixam arquivos simultaneamente, cada uma fica com metade da banda e assim por diante. Desde que nem todos os usuários da rede resolvam baixar arquivos simultaneamente, você pode compartilhar uma conexão ADSL entre 20 ou 30 micros tranquilamente.</p>
+
+<br>
+<br>
+<h3>Exemplo:</h3>
+
+<table class="table table-dark">
+  <tbody>
+    <tr>
+      <th scope="row"> IP:</th>
+      <td> 192.168.0.2</td>
+    </tr>
+    <tr>
+      <th scope="row"> Máscara:</th>
+      <td>255.255.255.0</td>
+    </tr>
+    <tr>
+      <th scope="row"> Gateway:</th>
+      <td>192.168.0.1 (o endereço do servidor)</td>
+    </tr>
+    <tr>
+      <th scope="row"> DNS: </th>
+      <td> 208.67.222.222 e 208.67.220.220</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        
+    
+    
+      

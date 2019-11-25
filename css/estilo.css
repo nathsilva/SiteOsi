@@ -103,3 +103,35 @@ footer{
 	-moz-box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.59);
 	box-shadow: inset 0px 0px 16px 1px rgba(0,0,0,0.59);
 }
+
+.block-setup {
+    background-color: #348fd4;
+    /*ou coloca #00BFFF*/
+}
+
+.block-branching {
+    background-color: #000;
+}
+
+.block-trees {
+    background-color: #4c0d09;
+}
+
+.scrollblock {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    color: white;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+h1 {
+    font-size: 70px;
+    font-weight: normal;
+    margin: 0;
+    color: white;
+    font-family: 'Chelsea Market', Georgia, serif;
+    text-transform: lowercase;
+}
+
